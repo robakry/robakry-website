@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --gray: rgb(148 163 184);
+  --light-gray: rgb(226 232 240);
+  --green: rgb(162, 238, 112);
+  --dark-green: rgba(26, 39, 25, 0.712);
+  --bg-dark: rgb(25, 29, 39);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  border: 1px solid var(--green);
+}
+
+body {
+  display: flex;
+  max-width: 1300px;
+  min-height: 250vh;
+  margin: auto;
+  gap: 3rem;
+  font-family: "Lato", sans-serif;
+  color: var(--gray);
+  line-height: 1.625;
+  background-color: var(--bg-dark);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  max-height: 80vh;
+  top: 4.5rem;
+  width: 50%;
+  margin: 3rem 0 3rem 3rem;
+  gap: 2rem;
+  cursor: default;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  transition: 0.25s;
+}
+
+.header-wrapper h1 {
+  letter-spacing: -2.5px;
+}
+
+#header-picture {
+  width: 170px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--light-gray);
+}
+
+.header-wrapper h1 {
+  font-size: 2.7rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+}
+
+.header-wrapper a {
+  font-size: 1.2rem;
+  line-height: 2.3rem;
+  color: var(--gray);
+  transition: 0.3s;
+}
+
+.header-wrapper a:hover {
+  color: var(--light-gray);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--green);
+}
+
+.nav-items {
+  margin-top: 4rem;
+  margin-left: 1rem;
+}
+
+.nav-items a {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: var(--gray);
+  transition: 0.3s;
+}
+
+.nav-items a:hover {
+  color: var(--light-gray);
+}
+
+.social-items {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-items img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  filter: brightness(75%);
+  transition: 0.3s;
+}
+
+.social-items img:hover {
+  filter: brightness(100%);
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 4rem 3rem 5rem 0;
+  gap: 2rem;
+  cursor: default;
+}
+
+.section-header h2 {
+  font-size: 1rem;
+}
+
+.about {
+  font-size: 1.06rem;
+}
+
+.about span {
+  color: var(--light-gray);
+}
+
+.about p {
+  margin-bottom: 1rem;
+}
+
+.content {
+  display: flex;
+  margin-bottom: 2rem;
+  padding: 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.content:hover {
+  background-color: #27344718;
+}
+
+.contentLeft {
+  display: flex;
+  justify-content: center;
+  width: 20%;
+  margin-right: 12px;
+}
+
+.content-projects img{
+  width: 100px;
+  height: 60px;
+  margin-top: 10px;
+  filter: brightness(90%);
+}
+
+.contentRight {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+
+.contentRight h3 {
+  margin-bottom: 3px;
+}
+
+.content-projects h3{
+  transition: 0.3s;
+}
+
+.content-projects a {
+  color: var(--light-gray);
+  transition: 0.3s;
+}
+
+.content-projects h3:hover,
+.content-projects a:hover {
+  color: var(--green);
+}
+
+.langs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--green);
+  margin-top: 1rem;
+}
+
+.langs li {
+  padding: 5px 10px;
+  border-radius: 15px;
+  background-color: var(--dark-green);
+}
+
+
+/* Media Queries */
+@media only screen and (max-width: 1120px) {
+  body {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  header {
+    position: relative;
+    top: 0;
+    gap: 1rem;
+    width: auto;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  main {
+    width: 92%;
+    margin: 0 auto;
+  }
+
+  .content-projects img {
+    width: 130px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  header {
+    margin-left: 2rem;
+  }
+  
+  #header-picture {
+    width: 150px;
+  }
+
+  .header-wrapper {
+    gap: 2rem;
+  }
+
+  .header-wrapper h1 {
+    font-size: 2.1rem;
+    line-height: 2.5rem;
+    letter-spacing: -2px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .content:hover {
+    background-color: transparent;
+  }
+
+  .contentLeft,
+  .contentRight {
+    width: auto;
+  }
+
+  .contentLeft {
+    justify-content: flex-start;
+  }
+
+  .content-projects .contentLeft {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header {
+    margin-left: 1.5rem;
+    gap: 0.5rem;
+  }
+
+  #header-picture {
+    display: none;
+  }
+
+  .header-wrapper {
+    gap: 0rem;
+  }
+}
